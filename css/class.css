@@ -1,0 +1,313 @@
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.subtitle{
+  color: #05364d;
+  text-decoration: none;
+  font-size:30px;
+  font-weight: bold;
+  
+}
+ .myNavPanel a{
+    font-size: 10px;
+    width: 100%;
+ }       
+        .header {
+            display: flex;
+            min-width: 100%;
+            
+            height: auto; /* Adjust height as needed */
+            background-color: lightgray;
+        }
+        .box1 {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content:start;
+            background-color:#05364d;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .box2 {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            background-color: #05364d;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .nav-panel {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color:#05364d;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 40px;
+            z-index: 1;
+        }
+        .nav-panel a {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 22px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+
+        }
+        .nav-panel a:hover {
+            background-color: #05364d;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+        .open-btn {
+            font-size: 40px;
+            background-color: #05364d;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+        }
+        .logoes{
+            width: 90%;
+            height: 120px;
+            padding: 10px;
+        }
+        @media screen and (max-width: 700px) {
+            .logoes{
+                width: 100%;
+                height: 90px;
+                padding: 10px;
+            }
+            .open-btn {
+                font-size: 30px;
+            }
+        }
+           @media screen and (max-width: 400px) {
+            .logoes{
+                width: 100%;
+                height: 50px;
+            }
+            .open-btn {
+                font-size: 20px;
+            }
+            }
+
+/*GALLERY*/
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0;
+   
+}
+.mySlides {display: none;
+}
+img {vertical-align: middle;
+    border-radius: 3%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+ 
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    border-radius: 100%;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  border-radius: 50%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #05364d;
+}
+
+/* Caption text */
+.text {
+  color: #05364d;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #05364d;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color:#05364d;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color:#05364d;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  width: 80%;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Lightbox styles */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox:active {
+  display: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/*FOOTER*/
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  width: 100%;
+  background-color:#05364d;
+
+}
+
+@media (min-width: 640px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid-item {
+  background-color:#05364d;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  
+}
+.grid-container p{
+  color: white;
+}
+.grid-container a{
+  color: white;
+}
